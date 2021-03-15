@@ -1,17 +1,22 @@
 #include <stdio.h>
 
+void tower(int n, int from, int to, int aux)
+{
+    if (n == 1)
+    {
+        printf("Move %d to %d\n", from, to);
+        return;
+    }
+    else
+    {
+        tower(n - 1, from, aux, to);
+        printf("Move %d to %d\n", from, to);
+        tower(n - 1, aux, to, from);
+    }
+}
+
 int main()
 {
-    int buck, mug, total = 0, count = 0, a;
-
-    scanf("%d %d", &buck, &mug);
-
-    while (total < (buck * 8 / 10))
-    {
-        scanf("%d", &a);
-        total += a;
-        count++;
-    }
-    printf("%d\n", count);
+    tower(2, 1, 2, 3);
     return 0;
 }
