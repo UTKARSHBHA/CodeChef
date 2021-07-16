@@ -1,4 +1,5 @@
-or (int i = 0; i < n; i++)
-        {
-            cout << arrb[i] << " ";
-        }
+nt brr[m];
+        // for (int i = 0; i < m; i++)
+        // {
+        //     cin >> brr[i];
+        // }
